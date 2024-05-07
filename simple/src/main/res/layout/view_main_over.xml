@@ -32,7 +32,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/colorAccent"
-                        android:text="自动打开微信朋友圈"
+                        android:text="@string/launch_app_button"
                         android:textColor="@color/colorPrimary" />
 
                     <Button

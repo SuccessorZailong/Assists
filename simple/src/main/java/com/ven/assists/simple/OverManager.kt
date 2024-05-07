@@ -12,6 +12,7 @@ import com.ven.assists.AssistsWindowManager
 import com.ven.assists.simple.databinding.ViewMainOverBinding
 import com.ven.assists.simple.step.GestureBottomTab
 import com.ven.assists.simple.step.GestureScrollSocial
+import com.ven.assists.simple.step.LaunchApp
 import com.ven.assists.simple.step.OpenWechatSocial
 import com.ven.assists.simple.step.PublishSocial
 import com.ven.assists.simple.step.ScrollContacts
@@ -33,7 +34,7 @@ object OverManager : StepListener, GestureListener {
                 btnCloseLog.isVisible = false
                 btnOpenSocial.setOnClickListener {
                     beginStart(this)
-                    StepManager.execute(OpenWechatSocial::class.java, Step.STEP_1, isBegin = true)
+                    StepManager.execute(LaunchApp::class.java, Step.STEP_1, isBegin = true)
                 }
                 btnPublishSocial.setOnClickListener {
                     beginStart(this)

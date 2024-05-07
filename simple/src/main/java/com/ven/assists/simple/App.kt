@@ -4,6 +4,7 @@ import android.app.Application
 import com.blankj.utilcode.util.Utils
 import com.ven.assists.simple.step.GestureBottomTab
 import com.ven.assists.simple.step.GestureScrollSocial
+import com.ven.assists.simple.step.LaunchApp
 import com.ven.assists.simple.step.OpenWechatSocial
 import com.ven.assists.simple.step.PublishSocial
 import com.ven.assists.simple.step.ScrollContacts
@@ -12,7 +13,8 @@ import com.ven.assists.stepper.StepManager
 class App : Application() {
 
     companion object{
-        const val TARGET_PACKAGE_NAME = "com.tencent.mm"
+        const val TARGET_PACKAGE_NAME = "com.seres.training"
+        const val TARGET_APP_NAME = "赛力斯课堂"
     }
     override fun onCreate() {
         super.onCreate()
@@ -22,5 +24,6 @@ class App : Application() {
         StepManager.register(ScrollContacts::class.java)
         StepManager.register(GestureBottomTab::class.java)
         StepManager.register(GestureScrollSocial::class.java)
+        StepManager.register(LaunchApp::class.java)
     }
 }
