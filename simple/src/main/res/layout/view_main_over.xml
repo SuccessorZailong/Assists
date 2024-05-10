@@ -14,7 +14,7 @@
         <LinearLayout
             android:id="@+id/ll_option"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="292dp"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -28,52 +28,13 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/btn_open_social"
+                        android:id="@+id/btn_auto_check_in_out"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/colorAccent"
-                        android:text="自动打开微信朋友圈"
+                        android:text="@string/auto_check_in_out"
                         android:textColor="@color/colorPrimary" />
 
-                    <Button
-                        android:id="@+id/btn_publish_social"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/colorAccent"
-                        android:text="自动发表一条微信私密朋友圈"
-                        android:textColor="@color/colorPrimary" />
-
-                    <Button
-                        android:id="@+id/btn_scroll_contacts"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/colorAccent"
-                        android:text="自动滚动微信通讯录"
-                        android:textColor="@color/colorPrimary" />
-
-                    <Button
-                        android:id="@+id/btn_click_bottom_tab"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/colorAccent"
-                        android:text="手势点击微信主页底部Tab"
-                        android:textColor="@color/colorPrimary" />
-
-                    <Button
-                        android:id="@+id/btn_scroll_social"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/colorAccent"
-                        android:text="手势滑动朋友圈列表"
-                        android:textColor="@color/colorPrimary" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/colorAccent"
-                        android:text="自动抢红包"
-                        android:textColor="@color/colorPrimary"
-                        android:visibility="gone" />
 
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
@@ -84,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#ccc000"
-                android:text="查看日志"
+                android:text="@string/view_log"
                 android:textColor="@color/colorPrimary" />
         </LinearLayout>
 
@@ -103,7 +64,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="【日志】"
+                    android:text="@string/log_title"
                     android:textColor="@color/_ffffff" />
 
                 <Button
@@ -111,9 +72,9 @@
                     android:layout_width="65dp"
                     android:layout_height="35dp"
                     android:backgroundTint="#FF9800"
-                    android:text="停止滚动"
+                    android:text="@string/stop_roll"
                     android:textColor="@color/_ffffff"
-                    android:textSize="10dp" />
+                    android:textSize="10sp" />
             </LinearLayout>
 
             <androidx.core.widget.NestedScrollView
@@ -140,7 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E02626"
-                android:text="停止"
+                android:text="@string/stop"
                 android:textColor="@color/_ffffff" />
 
             <Button
@@ -148,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#4CAF50"
-                android:text="关闭日志"
+                android:text="@string/close_log_view"
                 android:textColor="@color/_ffffff" />
         </LinearLayout>
 

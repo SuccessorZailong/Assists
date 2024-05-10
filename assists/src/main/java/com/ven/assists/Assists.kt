@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Path
 import android.graphics.Rect
+import android.os.Bundle
 import android.provider.Settings
 import android.text.TextUtils
 import android.util.Log
@@ -16,6 +17,7 @@ import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.ScreenUtils
 import com.blankj.utilcode.util.ThreadUtils
+
 
 object Assists {
 
@@ -324,11 +326,30 @@ object Assists {
      */
     fun AccessibilityNodeInfo.paste(text: String?) {
         service?.let {
+
             val clip = ClipData.newPlainText("${System.currentTimeMillis()}", text)
-            val clipboardManager = (it.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager)
+            val clipboardManager =
+                (it.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager)
             clipboardManager.setPrimaryClip(clip)
             clipboardManager.primaryClip
             performAction(AccessibilityNodeInfo.ACTION_PASTE)
+        }
+
+    }
+
+    /**
+     * 逐个输入字符
+     */
+    fun AccessibilityNodeInfo.input(text: String?) {
+        service?.let {
+            val arguments = Bundle()
+
+            arguments.putCharSequence(
+                AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE,
+                text
+            )
+
+            performAction(AccessibilityNodeInfo.ACTION_SET_TEXT, arguments)
         }
 
     }

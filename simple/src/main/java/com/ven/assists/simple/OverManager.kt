@@ -10,11 +10,7 @@ import com.ven.assists.GestureListener
 import com.ven.assists.Assists
 import com.ven.assists.AssistsWindowManager
 import com.ven.assists.simple.databinding.ViewMainOverBinding
-import com.ven.assists.simple.step.GestureBottomTab
-import com.ven.assists.simple.step.GestureScrollSocial
-import com.ven.assists.simple.step.OpenWechatSocial
-import com.ven.assists.simple.step.PublishSocial
-import com.ven.assists.simple.step.ScrollContacts
+import com.ven.assists.simple.step.AutoCheck
 import com.ven.assists.simple.step.Step
 import com.ven.assists.stepper.StepListener
 import com.ven.assists.stepper.StepManager
@@ -31,14 +27,11 @@ object OverManager : StepListener, GestureListener {
                 llOption.isVisible = true
                 llLog.isVisible = false
                 btnCloseLog.isVisible = false
-                btnOpenSocial.setOnClickListener {
+                btnAutoCheckInOut.setOnClickListener {
                     beginStart(this)
-                    StepManager.execute(OpenWechatSocial::class.java, Step.STEP_1, isBegin = true)
+                    StepManager.execute(AutoCheck::class.java, Step.STEP_1, isBegin = true)
                 }
-                btnPublishSocial.setOnClickListener {
-                    beginStart(this)
-                    StepManager.execute(PublishSocial::class.java, Step.STEP_1, isBegin = true)
-                }
+
                 btnStop.setOnClickListener {
                     stop()
                 }
@@ -51,18 +44,7 @@ object OverManager : StepListener, GestureListener {
                     btnCloseLog.isVisible = true
                     btnStop.isVisible = false
                 }
-                btnScrollContacts.setOnClickListener {
-                    beginStart(this)
-                    StepManager.execute(ScrollContacts::class.java, Step.STEP_1, isBegin = true)
-                }
-                btnClickBottomTab.setOnClickListener {
-                    beginStart(this)
-                    StepManager.execute(GestureBottomTab::class.java, Step.STEP_1, isBegin = true)
-                }
-                btnScrollSocial.setOnClickListener {
-                    beginStart(this)
-                    StepManager.execute(GestureScrollSocial::class.java, Step.STEP_1, isBegin = true)
-                }
+
                 root.setOnCloseClickListener {
                     clear()
                 }

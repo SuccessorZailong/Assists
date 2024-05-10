@@ -8,6 +8,7 @@ import com.ven.assists.Assists
 import com.ven.assists.AssistsService
 import com.ven.assists.AssistsServiceListener
 import com.ven.assists.simple.databinding.ActivityMainBinding
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -17,7 +18,7 @@ import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity(), AssistsServiceListener {
-    val viewBind: ActivityMainBinding by lazy {
+    private val viewBind: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater).apply {
             btnOption.setOnClickListener {
                 if (Assists.isAccessibilityServiceEnabled()) {
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity(), AssistsServiceListener {
         }
     }
 
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onServiceConnected(service: AssistsService) {
         GlobalScope.launch {
             onBackApp()

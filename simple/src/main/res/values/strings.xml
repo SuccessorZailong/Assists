@@ -2,4 +2,10 @@
     <string name="app_name">AssistsSimple</string>
     <string name="assists_description">这是AssistsSimple说明项</string>
     <string name="label">顶顶顶顶顶顶顶顶</string>
+    <string name="auto_check_in_out">自动打卡</string>
+    <string name="view_log">查看日志</string>
+    <string name="log_title">【日志】</string>
+    <string name="stop_roll">停止滚动</string>
+    <string name="stop">停止</string>
+    <string name="close_log_view">关闭日志</string>
 </resources>
