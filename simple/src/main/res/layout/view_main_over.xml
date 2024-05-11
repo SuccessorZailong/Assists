@@ -28,11 +28,11 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/btn_auto_check_in_out"
+                        android:id="@+id/btn_auto_trade"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/colorAccent"
-                        android:text="@string/auto_check_in_out"
+                        android:text="@string/auto_trade"
                         android:textColor="@color/colorPrimary" />
 
 

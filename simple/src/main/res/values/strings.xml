@@ -8,4 +8,5 @@
     <string name="stop_roll">停止滚动</string>
     <string name="stop">停止</string>
     <string name="close_log_view">关闭日志</string>
+    <string name="auto_trade">操</string>
 </resources>

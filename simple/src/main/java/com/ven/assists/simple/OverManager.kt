@@ -10,7 +10,7 @@ import com.ven.assists.GestureListener
 import com.ven.assists.Assists
 import com.ven.assists.AssistsWindowManager
 import com.ven.assists.simple.databinding.ViewMainOverBinding
-import com.ven.assists.simple.step.AutoCheck
+import com.ven.assists.simple.step.AutoTrade
 import com.ven.assists.simple.step.Step
 import com.ven.assists.stepper.StepListener
 import com.ven.assists.stepper.StepManager
@@ -27,9 +27,9 @@ object OverManager : StepListener, GestureListener {
                 llOption.isVisible = true
                 llLog.isVisible = false
                 btnCloseLog.isVisible = false
-                btnAutoCheckInOut.setOnClickListener {
+                btnAutoTrade.setOnClickListener {
                     beginStart(this)
-                    StepManager.execute(AutoCheck::class.java, Step.STEP_1, isBegin = true)
+                    StepManager.execute(AutoTrade::class.java, Step.LAUNCH, isBegin = true)
                 }
 
                 btnStop.setOnClickListener {
