@@ -72,12 +72,15 @@ class AutoCheck : StepImpl {
      * <应用首页,工作台>
      */
     private fun onStep2(): Pair<Boolean, AccessibilityNodeInfo?> {
-
-        return onStep("com.alibaba.android.rimet:id/home_bottom_tab_text", "工作台")
+        val zh = onStep("com.alibaba.android.rimet:id/home_bottom_tab_text", "工作台")
+        val en = onStep("com.alibaba.android.rimet:id/home_bottom_tab_text", "Workplace")
+        return if (zh.first) zh else en
     }
 
     private fun onStepLogin(): Pair<Boolean, AccessibilityNodeInfo?> {
-        return onStep("com.alibaba.android.rimet:id/tv", "登录")
+        val zh = onStep("com.alibaba.android.rimet:id/tv", "登录")
+        val en = onStep("com.alibaba.android.rimet:id/tv", "Login")
+        return if (zh.first) zh else en
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
